@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 333" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="white-only" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0 0 1 0 0  0 0 1 0 0  0 0 1 0 0  0 0 1 0 0" />
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="10" intercept="-8.5" />
+        <feFuncG type="linear" slope="10" intercept="-8.5" />
+        <feFuncB type="linear" slope="10" intercept="-8.5" />
+      </feComponentTransfer>
+    </filter>
+    <mask id="white-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="333" mask-type="luminance">
+      <image x="0" y="0" width="500" height="333" xlink:href="logo%20rover.png" filter="url(#white-only)" />
+    </mask>
+  </defs>
+  <image x="0" y="0" width="500" height="333" xlink:href="logo%20rover.png" mask="url(#white-mask)" />
+</svg>
